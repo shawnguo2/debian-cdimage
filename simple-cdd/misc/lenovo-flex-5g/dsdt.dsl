@@ -327,13 +327,13 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
         Name (SOID, 0x00000194)
         Name (STOR, 0x00000001)
         Name (SIDS, "SC8180XP")
-        Zero
-        Zero
-        Zero
-        Zero
-        Zero
-        Zero
-        Zero
+        //Zero
+        //Zero
+        //Zero
+        //Zero
+        //Zero
+        //Zero
+        //Zero
         Name (SIDV, 0x00020001)
         Name (SVMJ, 0x0002)
         Name (SVMI, 0x0001)
@@ -725,10 +725,10 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
         Device (PRTC)
         {
             Name (_HID, "ACPI000E" /* Time and Alarm Device */)  // _HID: Hardware ID
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                "\\_SB.PMAP"
-            })
+            //Name (_DEP, Package (0x01)  // _DEP: Dependencies
+            //{
+            //    "\\_SB.PMAP"
+            //})
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 Return (0x0B)
@@ -77751,7 +77751,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
             Alias (\_SB.PSUB, _SUB)
             Alias (\_SB.SIDT, _IDT)
             Name (_UID, Zero)  // _UID: Unique ID
-            Name (_CLS, 0x0003000000000000)  // _CLS: Class Code
+            //Name (_CLS, 0x0003000000000000)  // _CLS: Class Code
             Name (_HRV, 0x7C)  // _HRV: Hardware Revision
             Device (MON0)
             {
@@ -100056,11 +100056,11 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
                 Name (_HID, "ENES6243")  // _HID: Hardware ID
                 Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
                 Name (_UID, One)  // _UID: Unique ID
-                Name (_DEP, Package (0x02)  // _DEP: Dependencies
-                {
-                    "\\_SB.GIO0", 
-                    "\\_SB.I2C8"
-                })
+                //Name (_DEP, Package (0x02)  // _DEP: Dependencies
+                //{
+                //    "\\_SB.GIO0", 
+                //    "\\_SB.I2C8"
+                //})
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
                     Return (0x0F)
