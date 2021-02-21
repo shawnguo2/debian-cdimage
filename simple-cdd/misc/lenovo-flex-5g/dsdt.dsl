@@ -96598,7 +96598,8 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
                             "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                             )
                             {   // Pin list
-                                0x0280
+                                //0x0280
+                                0x0018
                             }
                     })
                     Return (RBUF) /* \_SB_.I2C8.TSC2._CRS.RBUF */
@@ -96675,7 +96676,8 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
                             "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                             )
                             {   // Pin list
-                                0x0280
+                                //0x0280
+                                0x0018
                             }
                     })
                     Return (RBUF) /* \_SB_.I2C8.TCPD._CRS.RBUF */
@@ -100318,6 +100320,10 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000003)
                 \_SB.I2C2, 
                 \_SB.PEP0
             })
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                    Return (Zero)
+            }
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
